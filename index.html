@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaushik Kumar — Cybersecurity Student</title>
+  <meta name="description" content="Portfolio — Cybersecurity student showcasing skills, projects and contact." />
+  <style>
+    :root{
+      --bg: #0f1724; --card:#0b1220; --muted:#98a6b3; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071029 0%, #071627 80%); color:#e6eef6}
+    .container{max-width:1000px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:grid;place-items:center;font-weight:700}
+    h1{margin:0;font-size:1.5rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#042023;padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:20px;margin-top:26px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(6,6,10,0.2));border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .profile{display:flex;gap:18px}
+    .avatar{width:92px;height:92px;border-radius:12px;background:linear-gradient(180deg,#1f2937,#111827);display:grid;place-items:center;font-size:28px}
+    .meta small{color:var(--muted)}
+
+    section h2{margin:0 0 12px;font-size:1.05rem}
+    .skills{display:grid;gap:10px}
+    .skill{display:flex;justify-content:space-between;align-items:center}
+    .bar{height:8px;background:var(--glass-2);border-radius:6px;flex:1;margin-left:12px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7c3aed);border-radius:6px}
+
+    .projects{display:grid;gap:12px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);} 
+    .proj h3{margin:0 0 6px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:var(--glass);color:var(--muted)}
+
+    aside .card+ .card{margin-top:18px}
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .icon{width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:8px;opacity:0.9}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* top-nav tweaks */
+    .top-nav{display:flex;gap:10px;align-items:center}
+    .top-nav .btn{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px}
+    .top-nav .btn:hover{background:var(--accent);color:#042023}
+
+    /* social icons (icon-only display) */
+    .social-icons{display:flex;gap:8px;align-items:center}
+    .social-icons a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted);text-decoration:none}
+    .social-icons a:hover{background:rgba(255,255,255,0.03);color:var(--accent)}
+
+    /* comment form styles */
+    .comment-card .comment-form{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+    .comment-card .comment-form input,.comment-card .comment-form textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:inherit;padding:8px;border-radius:8px}
+    .comment-card .comment-form textarea{min-height:90px;resize:vertical}
+    .btn-secondary{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;cursor:pointer}
+    .btn-secondary:hover{background:var(--accent);color:#042023}
+
+    /* responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr}
+      .container{padding:16px}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      nav{width:100%;display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+      .brand{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">KK</div>
+        <div>
+          <h1>Kaushik Kumar</h1>
+          <p class="lead">Cybersecurity student · Red teaming | Web app security | SOC basics</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#certifications">Certifications</a>
+        <a class="btn" href="bugbounty.html">Bug Bounty</a>
+        <a class="btn" href="#tools">Tools</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <!-- PROFILE -->
+        <div class="profile">
+          <div class="avatar">👨‍💻</div>
+          <div class="meta">
+            <div style="display:flex;gap:10px;align-items:center">
+              <strong>Cybersecurity Student</strong>
+              <small style="background:var(--glass);padding:6px 8px;border-radius:8px">
+                Open to internships · Remote / On-site
+              </small>
+            </div>
+            <p style="margin:8px 0 0;color:var(--muted)">
+              Cybersecurity student focused on web application security, red teaming, and SOC fundamentals.
+              Hands-on experience solving PortSwigger Web Security Academy labs, building small attack labs
+              with VMs, and writing professional-style penetration test reports.
+            </p>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <!-- SKILLS -->
+        <div id="skills">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill"><span>Web App Security</span><div class="bar"><i style="width:82%"></i></div></div>
+            <div class="skill"><span>Network Pentesting</span><div class="bar"><i style="width:68%"></i></div></div>
+            <div class="skill"><span>Linux &amp; Scripting</span><div class="bar"><i style="width:80%"></i></div></div>
+            <div class="skill"><span>SIEM / SOC Basics</span><div class="bar"><i style="width:55%"></i></div></div>
+            <div class="skill"><span>Reverse Engineering</span><div class="bar"><i style="width:35%"></i></div></div>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <!-- PROJECTS -->
+        <div id="projects">
+          <h2>Highlighted Projects</h2>
+          <div class="projects">
+            <article class="proj">
+              <h3>Professional Web App Assessment — Demo E‑commerce</h3>
+              <p style="margin:6px 0 8px;color:var(--muted)">
+                Performed manual and assisted testing of a demo e‑commerce application, focusing on the OWASP
+                Top 10. Identified XSS and insecure direct object reference issues, documented impact and
+                exploitation steps, and delivered an executive summary plus technical remediation guidance.
+              </p>
+              <div class="tags">
+                <span class="tag">Burp Suite</span>
+                <span class="tag">OWASP Top 10</span>
+                <span class="tag">Reporting</span>
+              </div>
+            </article>
+
+            <article class="proj">
+              <h3>Home Red Team Lab</h3>
+              <p style="margin:6px 0 8px;color:var(--muted)">
+                Built a small lab using multiple VMs to simulate phishing‑based initial access, privilege
+                escalation, and lateral movement in an AD‑style network. Used tools such as BloodHound and
+                Empire to map relationships, identify attack paths, and practice post‑exploitation.
+              </p>
+              <div class="tags">
+                <span class="tag">VM Lab</span>
+                <span class="tag">BloodHound</span>
+                <span class="tag">Empire</span>
+                <span class="tag">Adversary Emulation</span>
+              </div>
+            </article>
+
+            <article class="proj">
+              <h3>PortSwigger &amp; CTF Write‑ups</h3>
+              <p style="margin:6px 0 8px;color:var(--muted)">
+                Solving PortSwigger Web Security Academy labs across topics like SQL injection, XSS, access
+                control and authentication, then documenting each lab with methodology, payloads, and
+                mitigation ideas. Complemented this with CTF write‑ups (web, crypto, forensics) published on
+                GitHub / blog to show clear reasoning and reproducible steps.
+              </p>
+              <div class="tags">
+                <span class="tag">PortSwigger Labs</span>
+                <span class="tag">SQLi / XSS</span>
+                <span class="tag">CTF Write‑ups</span>
+                <span class="tag">Technical Writing</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section">
+          <div class="header-section">
+            <h2>Certifications</h2>
+            <div class="section-line"></div>
+          </div>
+          <ul style="padding-left:18px;color:var(--muted);margin:0">
+            <li><strong>Practical Security Fundamentals</strong> – TCM Security (27 June 2025)</li>
+            <li><strong>Programming 100: Fundamentals</strong> – TCM Security (27 June 2025)</li>
+            <li><strong>Cybersecurity Job Simulation</strong> – Mastercard &amp; Forage (25 April 2025)</li>
+            <li><strong>Jr Penetration Tester Learning Path</strong> – TryHackMe (22 November 2024)</li>
+
+            <li><strong>Web Penetration Testing</strong> – Codevirus Security<br>
+              <small style="color:var(--muted)">Certificate of Completion · Name on Certificate: Kaushik Kumar · Issue Date: 11 June 2024 · Certificate ID: CVS00108</small>
+            </li>
+
+            <li><strong>Ethical Hacking</strong> – Codevirus Security<br>
+              <small style="color:var(--muted)">Certificate of Completion · Name on Certificate: Kaushik Kumar · Issue Date: 11 June 2024 · Certificate ID: CVS00108</small>
+            </li>
+
+            <li><strong>Penetration Testing</strong> – Codevirus Security<br>
+              <small style="color:var(--muted)">Certificate of Completion · Name on Certificate: Kaushik Kumar · Issue Date: 11 June 2024 · Certificate ID: CVS00108</small>
+            </li>
+
+            <li><strong>Cyber Security (Internship)</strong> – Codevirus Security<br>
+              <small style="color:var(--muted)">Certificate of Internship (1 month: 01 July 2024 to 31 July 2024) · Name on Certificate: Kaushik Kumar · Issue Date: 10 Aug 2024 · Certificate ID: CVS000116</small>
+            </li>
+
+            <li><strong>Digital Marketing, Social Media Management, and Content Creation</strong> – Promotionia<br>
+              <small style="color:var(--muted)">Certificate of Training · Name on Certificate: Kaushik Kumar · Issue Date: Completed (date not specified) · Certificate ID: Not visible</small>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <section class="card" id="contact">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <div class="social-icons" aria-hidden="false">
+              <a href="https://medium.com/@ZeroDayForge" target="_blank" rel="noopener noreferrer" aria-label="Medium" title="Medium">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 6.5C2 5.7 2.7 5 3.5 5h.6l4.9 9.9L15 5h.9c.8 0 1.5.7 1.5 1.5V18c0 .8-.7 1.5-1.5 1.5H3.5C2.7 19.5 2 18.8 2 18V6.5z"></path></svg>
+              </a>
+              <a href="https://www.youtube.com/@StackOverflowX12" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 15l5.2-3L10 9v6zm12-3c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v3z"></path></svg>
+              </a>
+              <a href="https://discord.com/users/Stack0ver_Flow" target="_blank" rel="noopener noreferrer" aria-label="Discord" title="Discord">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 14.5c.8 0 1.5-.7 1.5-1.5S8.3 11.5 7.5 11.5 6 12.2 6 13s.7 1.5 1.5 1.5zm9 0c.8 0 1.5-.7 1.5-1.5S17.3 11.5 16.5 11.5 15 12.2 15 13s.7 1.5 1.5 1.5z"></path></svg>
+              </a>
+              <a href="https://twitter.com/ZeroDayForge" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.2-1 1.5-1.7-.6.4-1.3.7-2 .9C18.7 5 17.8 4.5 16.8 4.5c-1.7 0-3 1.4-3 3 0 .2 0 .4.1.6C10.6 8 8 6.7 6.3 4.6c-.3.5-.5 1-.5 1.6 0 1.1.6 2.1 1.6 2.7-.5 0-1-.2-1.4-.4v.1c0 1.5 1 2.8 2.4 3-.3.1-.7.2-1 .2-.2 0-.5 0-.7-.1.5 1.6 2 2.7 3.7 2.8-1.4 1.1-3.1 1.7-4.9 1.7-.3 0-.6 0-.9-.1 1.8 1.1 3.9 1.8 6.2 1.8 7.4 0 11.4-6.1 11.4-11.4v-.5c.8-.6 1.4-1.3 1.9-2.2-.7.3-1.5.6-2.3.7z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/stackoverflowx10n" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><circle cx="12" cy="12" r="3.2" fill="#071627"/></svg>
+              </a>
+              <!-- GitHub icon removed from contact-icons to avoid duplication (kept on social.html) -->
+              <a href="https://www.reddit.com/user/hustleinferno29" target="_blank" rel="noopener noreferrer" aria-label="Reddit" title="Reddit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 4.7 3.2 8.6 7.6 9.6.6.1.8-.3.8-.6v-2c-3.1.7-3.8-1.5-3.8-1.5-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.3 2 1.3 1.2 2 3.2 1.4 4 .9.1-.7.5-1.4.9-1.7-2.5-.3-5-1.2-5-5.4 0-1.2.4-2.2 1-3-.1-.3-.4-1.5.1-3 0 0 .8-.3 2.9 1.1 1-.3 2-.5 3-.5s2 .2 3 .5c2.1-1.4 2.9-1.1 2.9-1.1.5 1.5.2 2.7.1 3 .6.8 1 1.8 1 3 0 4.2-2.5 5.1-4.9 5.4.5.4 1 1.1 1 2.2v2.9c0 .3.2.7.8.6C18.8 20.6 22 16.7 22 12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/stackoverflow12xn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 2.99 5.5 1.88 5.5 1 4.6 1 3.5 1 2.4 1.88 1.5 2.99 1.5 4.1 1.5 4.98 2.4 4.98 3.5zM.9 8.98h4.2V24H.9zM8.8 8.98h4V11h.1c.6-1.1 2.1-2.3 4.5-2.3C23.3 8.7 24 12.1 24 16.4V24h-4.2v-6.6c0-1.6-.1-3.6-2.2-3.6-2.2 0-2.5 1.7-2.5 3.5V24H8.8z"/></svg>
+              </a>
+            </div>
+            <div style="margin-top:8px"><a class="btn" href="social.html">Open all socials</a></div>
+          </div>
+        </section>
+
+        <section class="card" id="tools">
+          <h2>Tools &amp; Platforms</h2>
+          <div class="contact-list">
+            <span>Burp Suite · PortSwigger Web Security Academy</span>
+            <span>TryHackMe · Hack The Box</span>
+            <span>Splunk / SIEM basics</span>
+            <span>Linux · Python · Bash</span>
+          </div>
+        </section>
+
+        <section class="card comment-card" id="comment">
+          <h2>Leave a comment</h2>
+          <form id="comment-form" class="comment-form">
+            <input type="text" name="name" placeholder="Your name" aria-label="Name">
+            <input type="email" name="email" placeholder="Email" aria-label="Email">
+            <textarea name="message" placeholder="Your message" aria-label="Message"></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn-secondary">Send comment</button>
+              <button type="reset" class="btn-secondary" style="opacity:0.9">Clear</button>
+            </div>
+          </form>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="card" style="background:transparent;box-shadow:none;padding:12px;margin-top:18px">
+        <small>© 2025 Kaushik Kumar — Portfolio</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script>
+// Simple client-side demo handler for the comment form
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.getElementById('comment-form');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = (form.querySelector('input[name="name"]')||{}).value || '';
+    const email = (form.querySelector('input[name="email"]')||{}).value || '';
+    const message = (form.querySelector('textarea[name="message"]')||{}).value || '';
+    if(!name.trim() || !email.trim() || !message.trim()){
+      alert('Please fill name, email and message.');
+      return;
+    }
+    form.innerHTML = '<p style="color:var(--muted);margin:0">Thanks — your comment has been received (local demo).</p>';
+  });
+});
+</script>
